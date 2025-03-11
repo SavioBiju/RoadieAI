@@ -6,10 +6,10 @@ import numpy as np
 app = Flask(__name__)
 
 # Load trained AI model
-model = tf.keras.models.load_model("model/safety_model.h5")
+model = tf.keras.models.load_model("RoadieAI.h5")
 
 # Initialize OpenRouteService
-ORS_API_KEY = "YOUR_OPENROUTESERVICE_API_KEY"
+ORS_API_KEY = "5b3ce3597851110001cf6248d55a130edd4f4676be9218174c9e2db3"
 client = openrouteservice.Client(key=ORS_API_KEY)
 
 @app.route('/safe-route', methods=['POST'])
